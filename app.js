@@ -4,7 +4,7 @@ const path = require('path');
 const router = express.Router();
 const nodemailer = require('nodemailer');
 const multiparty = require('multiparty');
-const { verify } = require('crypto');
+// const { verify } = require('crypto');
 require("dotenv").config;
 
 
@@ -26,23 +26,19 @@ console.log(`Running on port ${PORT}...`);
 
 
 const transporter = nodemailer.createTransport({
-  service: "smtp.gmail.com",
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
   auth: {
     user: process.env.EMAIL,
     pass: process.env.PASS,
   }
 });
 
-transporter.verify(function(error, success) {
-  if (error) {
-    console.log(error)
-  } else {
-    console.log("Server is up")
-  }
-})
 
 
 app.post('/send', (req, res) => {
+  
   let form = new multiparty.Form();
   let data = {};
   form.parse(req, function (err, fields) {
@@ -54,7 +50,7 @@ app.post('/send', (req, res) => {
     
 const mail = {
   from: data.name,
-  to: process.env.EMAIL,
+  to: process.env.EMAIL ,
   subject: data.subject,
   text: `${data.name} <${data.email}> \n${data.message}`,
   }

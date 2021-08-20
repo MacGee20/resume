@@ -4,7 +4,6 @@ const path = require('path');
 const router = express.Router();
 const nodemailer = require('nodemailer');
 const multiparty = require('multiparty');
-// const { verify } = require('crypto');
 require("dotenv").config;
 
 
@@ -52,7 +51,7 @@ const mail = {
   from: data.name,
   to: process.env.EMAIL ,
   subject: data.subject,
-  text: `${data.name} <${data.email}> \n${data.message}`,
+  text: `${data.name} <${data.email}> \n ${data.subject}\n ${data.message}`,
   }
 
   transporter.sendMail(mail, (error, data) => {  

@@ -4,6 +4,7 @@ const path = require('path');
 const router = express.Router();
 const nodemailer = require('nodemailer');
 const multiparty = require('multiparty');
+const { verify } = require('crypto');
 require("dotenv").config;
 
 
@@ -31,6 +32,14 @@ const transporter = nodemailer.createTransport({
     pass: process.env.PASS,
   }
 });
+
+transporter.verify(function(error, success) {
+  if (error) {
+    console.log(error)
+  } else {
+    console.log("Server is up")
+  }
+})
 
 
 app.post('/send', (req, res) => {

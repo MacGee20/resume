@@ -13,7 +13,7 @@ const formEvent = form.addEventListener("submit", (event) => {
 })
 
 const sendMail = (mail) => {
-    fetch("https://fast-brushlands-74233.herokuapp.com/send", {
+    fetch("http://fast-brushlands-74233.herokuapp.com/send", {
         method:"post",
         body: mail,
     }).then((response)=>{

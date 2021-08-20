@@ -5,7 +5,7 @@
 
 
 const sendMail = (mail) => {
-    fetch("https://http://localhost:3000//send", {
+    fetch("https://fast-brushlands-74233.herokuapp.com/send", {
         method:"post",
         body: mail,
     }).then((response)=>{

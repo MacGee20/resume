@@ -25,9 +25,12 @@ console.log(`Running on port ${PORT}...`);
 
 
 const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 465,
-  secure: true,
+  host: 'smtp-mail.outlook.com',
+  port: 587,
+  secure: false,
+  tls: {
+    ciphers:'SSLv3'
+ },
   auth: {
     user: process.env.EMAIL,
     pass: process.env.PASS,
@@ -49,7 +52,7 @@ app.post('/send', (req, res) => {
     
 const mail = {
   from: data.name,
-  to: process.env.EMAIL ,
+  to: process.env.EMAIL,
   subject: data.subject,
   text: `${data.name} <${data.email}> \n ${data.subject}\n ${data.message}`,
   }

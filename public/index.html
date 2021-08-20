@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    
+    
+    <script type="text/javascript" src="/index.js"> </script>
+    
+    <link rel ="stylesheet" href= "/index.css" >
+</head>
+<body>
+    
+    <main>
+        
+            <article id="image">
+                <img src="https://hng.tech/img/brand-logo.png" alt="HNGi8 x I4G" />        
+            </article>
+            
+            
+                  <p id="name"> 
+                        <h1></h1>  
+                  </p>
+
+                  <input type="button" onclick = "myName()" value="Display Name"/>
+        
+
+       <p>A software engineer who specialises in builing web applications on a javascript engine.</p>
+        
+      <p>
+          <h2>Skills</h2>
+        
+        <ul>
+            <li>MongoDB</li>
+            <li>Expressjs</li>
+            <li>Reactjs</li>
+            <li>Nodejs</li>
+        </ul>
+      </p>
+
+        <div>
+            <label for ="mail">
+                Contact:
+            </label>
+            <form 
+                id="contact-form"
+                method = "POST"
+                action="send" 
+                enctype="multipart/form-data">
+            
+            <div class="form-group">
+                <input
+                    placeholder="Name"
+                    id="name"
+                    type="text"
+                    class="form-control"
+                    required/>
+
+                    <input
+                    placeholder="Email"
+                    id="email"
+                    type="email"
+                    class="form-control"
+                    required/>
+
+                    <input
+                    placeholder="Subject"
+                    id="subject"
+                    type="text"
+                    class="form-control"
+                    required/>
+
+                    <textarea 
+                    placeholder="Message"
+                    id="message" 
+                    name="message"
+                    class="form-control" 
+                    spellcheck="true" 
+                    rows="10" cols="50" maxlength="150" 
+                    required >
+                    </textarea>
+            </div>
+                    
+                    <input type="submit" value="send" /> 
+               
+            </form>
+        </div>
+   </main> 
+</body>
+
+<footer>
+
+</footer>
+</html>
+

@@ -1,6 +1,6 @@
 
  const myName = () => {
-     document.getElementById("name").innerHTML= "Gift Omodu";
+     document.getElementById("reveal").innerHTML= "Gift Omodu";
 }
 
 

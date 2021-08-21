@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Gift Omodu</title>
     
     
     <script type="text/javascript" src="/index.js"> </script>
@@ -13,35 +13,68 @@
 </head>
 <body>
     
-    <main>
-        
-            <article id="image">
-                <img src="https://hng.tech/img/brand-logo.png" alt="HNGi8 x I4G" />        
-            </article>
-            
-            
-                  <p id="name"> 
-                        <h1></h1>  
-                  </p>
+    <main> 
 
-                  <input type="button" onclick = "myName()" value="Display Name"/>
-        
+        <img id="HNGi8" src="https://hng.tech/img/brand-logo.png" alt="HNGi8 x I4G"/>
 
-       <p>A software engineer who specialises in builing web applications on a javascript engine.</p>
-        
-      <p>
-          <h2>Skills</h2>
-        
-        <ul>
-            <li>MongoDB</li>
-            <li>Expressjs</li>
-            <li>Reactjs</li>
-            <li>Nodejs</li>
-        </ul>
-      </p>
+                <div>
+                    <p id="reveal"> 
+                            <h1></h1>  
+                    </p>
+
+                    <input class="submit" type="button" onclick = "myName()" value="Display Name"/>
+                </div>
 
         <div>
-            <label for ="mail">
+
+
+            
+                <p><img class="one" src="https://icon-library.com/images/location_pin_gps-512_72198.png" alt="location-tag" />Port-Harcourt, Nigeria.</p>
+                <div class="contact-me"> 
+                <a href="tel:+2348060562422"><img class="one" src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/phone-512.png" alt="phone" /></a>
+                <a  href="https://twitter.com/Mac_O_Gee"><img class="one" src="https://www.danoneinstitute.org/wp-content/uploads/2020/06/logo-rond-twitter.png" alt="twitter" /></a>
+                </diiv>
+      
+        </div>
+
+        <div class ="bio">
+                <p> 
+                    A software developer who specialises in builing web applications on a javascript engine.
+                    Love nature walks, sports and board games.
+                </p>
+        </div>
+        <div>
+                <p> <h3>SKILLS</h3>
+                    <ul>
+                        <li>MongoDB</li>
+                        <li>Expressjs</li>
+                        <li>Reactjs</li>
+                        <li>Nodejs</li>
+                    </ul>
+                </p>
+        </div>
+
+        <div>
+            <p>
+               <h3> WORK EXPERIENCE</h3>
+                    HNGi8 (August, 2021 - present) <br>
+                    <em>Back-end Developer Intern</em>
+                
+
+            </p>
+
+            <p>
+                <h3> EDUCATION </h3>
+                
+                    Rivers State University<br>
+                    <em>Petroleum Engineering (B.Tech)</em>
+                
+
+            </p>
+        </div>
+
+        <div>
+            <label id="mail" for ="mail">
                 Contact:
             </label>
             <form 
@@ -82,11 +115,10 @@
                     class="form-control" 
                     spellcheck="true" 
                     rows="10" cols="50" maxlength="150" 
-                    required >
-                    </textarea>
+                    required ></textarea>
             </div>
                     
-                    <input type="submit" value="send" /> 
+                    <input id="submit" type="submit" value="send" /> 
                
             </form>
         </div>
@@ -97,4 +129,3 @@
 
 </footer>
 </html>
-

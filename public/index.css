@@ -1,78 +1,56 @@
 body {  
     font-family: 'Lato', sans-serif;
-    background-color: white ;
-    background-image: linear-gradient( white, rgb(149, 211, 240), white );
+    font-size: 1.3rem;
+    background-color: rgb(149, 211, 240) ;    
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-
 }
 
 main{
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  font-size: 2.3em;
-}
-nav {
-  position: relative;
-  background-color: rgb(149, 211, 240);
-  height: 100px;
-  text-align: left;
-  font-size: 70px;
-  font-weight: bold;
-  padding-left: 10px;
-  margin-bottom: 20px;
+ 
 }
 
-#HNGi8  {
-  width: 470px;
-  max-width: 470px;
-  height: 110px;
-  max-height: 110px;
-  padding: 15px;
-  
-}
-ul {
+nav {
+  position: fixed;
   display: flex;
   flex-direction: row;
+  justify-content:space-between;
+  background-color: rgb(149, 211, 240);
+  font-size: 40px;
+  font-weight: bold;
+  padding:2rem 0 0 2rem;
+  height: 15%;
+  width:100%;
+
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
   list-style: none;
-  justify-content: space-evenly;
-  margin: 20px;
 
 }
 
 h2{
-  font-size: 2.3em;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-
-label{
-  font-size: 2.3em;
-  text-align: center;
-  margin-bottom: 0;
-}
-
-form{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 500px;
-  margin: 50px auto 50px auto ;
-}
+  form{
+   display: flex;
+   flex-direction: column;
+   margin: 25px;
+} 
 
 
 input {
-
-  font-family: 'Lato', sans-serif;
-  font-size: 0.875em;
-  width: 470px;
+  display: flex;
+   flex-direction: column;
+  font-size: 0.875rem;
+  width: 250px;
   height: 50px;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 25px 0px 25px;
   
   background: transparent;
   outline: none;
@@ -88,17 +66,16 @@ input:hover {
 }
 textarea {
   resize: none;
-  width: 470px;
-  max-width: 470px;
-  height: 110px;
+  width: 250px;
+  max-width: 250px;
   max-height: 110px;
-  padding: 15px;
+  padding: 25px 25px 0 25px;
+  
   
   background: transparent;
   outline: none;
   
-  font-family: 'Lato', sans-serif;
-  font-size: 0.875em;
+  font-size: 0.875rem;
   
   border: solid 1px #b3aca7;
 }
@@ -112,13 +89,11 @@ textarea:hover {
 
 #submit {
   
-  width: 502px;
+  width: 75px;
   
   padding: 0;
-  margin: -5px 0px 0px 0px;
   
-  font-family: 'Lato', sans-serif;
-  font-size: 0.875em;
+  font-size: 0.875rem;
   color: #b3aca7;
   
   outline:none;
@@ -131,39 +106,63 @@ textarea:hover {
 #submit:hover {
   color: #e2dedb;
 }
-  /* #reveal {
-    font-size: 2.5em;
-    font-weight: bolder;
-  } */
 
   .one {
-    width: 2em;
-    height: 2em;
+    width: 1rem;
+    height: 1rem;
   }
 
   .contact-me  {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    margin: 10px 0 10px 0;
-    padding-right: 10px;
-
+    align-items:flex-end;
+    padding-right: 2rem;
   }
 
-  .bio {
-    border:2px solid whitesmoke;
-    padding: 20px;
+  .bio{
+    border:2px solid cornsilk;
+    padding: 10px;
     text-align: justify;
-    margin: 10px 0 10px 0;
+    margin-top: 120px;
+   
+  }
+  
+  h4  {
+    
+    border-right: 2px solid skyblue;
+    border-bottom: 2px solid skyblue;
+  }
+
+  .skill  {
+    align-content: center;
+    border:2px solid cornsilk;
+    text-align: justify;
+    margin: 20px;
+    
   }
 
   .field  {
     
-    border:2px solid whitesmoke;
+    border:2px solid cornsilk;
     padding: 20px;
     text-align:justify;
-    margin: 10px 0 10px 0;
   }
-  .contact {
-    border-top: 2px solid cornsilk;
-  }
+
+ .contact {
+  display: flex;
+  flex-direction: column;
+  background-color: cornsilk;
+  margin: 20px auto 40px auto ;
+   
+  } 
+
+footer {
+  background-color: rgb(113, 119, 119);
+  font:  lighter smaller monospace;
+  padding: 20px;
+  text-align: center;
+}
+
+.bio,.skill, .field {
+  background-color: whitesmoke;
+}
